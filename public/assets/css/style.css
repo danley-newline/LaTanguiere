@@ -1,0 +1,27 @@
+.line-top {
+    margin-top: 1.5rem;
+    border-top: 1px solid #000;
+}
+.bg-vert-sombre{
+    background: #578f94;
+}
+.bg-marron{
+    background: #795b3f;
+}
+h1, h2, h3, h4, h5{
+    font-family: math !important;
+}
+
+.img-chambres{
+    width: 95%;
+    margin-top: -1.5rem;
+}
+
+.more-chambre-two img{
+    background: #795b3f;
+    border-radius: 50%;
+}
+.more-chambre-one img{
+    background: #578f94;
+    border-radius: 50%;
+}
