@@ -4,9 +4,19 @@
 }
 .bg-vert-sombre{
     background: #578f94;
+    transition: 0.5s;
+}
+.bg-vert-sombre:hover{
+    background: #69c2ca;
+    transition: 0.5s;
 }
 .bg-marron{
     background: #d9c9bf;
+    transition: 0.5s;
+}
+.bg-marron:hover{
+    background: #be9f8c;
+    transition: 0.5s;
 }
 .bg-blue-light{
     background: #afc8cb;
@@ -37,7 +47,7 @@ footer .aides-contact{
     width: 96%;
     margin-top: -1.5rem;
 }
-h5.text-light{
+.text-light{
     text-shadow: 2px 1px 2px #000;
 }
 
@@ -90,3 +100,13 @@ h5.text-light{
     box-shadow: -13px 14px 2px #d9c9bf;
 }
 /* END CSS PAGE DECOUVERTE */
+
+
+/* PAGE CONTACT */
+.contact-title h1{
+    font-weight: bold;
+    color: #a5816c;
+    font-size: 3rem;
+}
+
+/* END CSS*/
