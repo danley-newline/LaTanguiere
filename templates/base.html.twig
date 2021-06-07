@@ -18,7 +18,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
             <div class="mx-auto">
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,21 +26,24 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarColor02">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="{{ path('accueil') }}">
                    <img src="{{ asset('assets/img/clement-helardot-95YRwf6CNw8-unsplash.jpg') }}" height="50" width="90" alt="">
                 </a>
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">ACCUEIL</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('accueil') }}">ACCUEIL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">NOS CHAMBRES</a>
+                        <a class="nav-link" href="{{ path('nos_chambres') }}">NOS CHAMBRES</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">A DECOUVRIR</a>
+                        <a class="nav-link" href="{{ path('nos_decouverte') }}">A DECOUVRIR</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">CONTACTEZ NOUS</a>
+                    </li>
+                    <li>
+                        <a class="btn bg-vert-sombre text-light" href=""> RÉSERVER </a>
                     </li>
                 
                 </ul>
@@ -49,6 +52,61 @@
         </nav>
         {% block body %}
         {% endblock %}
+
+
+        <footer class="bg-marron py-5">
+            <div class="row px-5">
+                <div class="col-md-3">
+                    <h4 class="font-weight-bold">LA TANGUIERE</h4>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">Qui Sommes-nous ?</a> 
+                    </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">Réserver dès maintenant</a> </p>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="font-weight-bold">NOS RUBRIQUES</h4>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="{{ path('accueil') }}" class="text-dark">Accueil</a> </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="{{ path('nos_chambres') }}" class="text-dark">Nos chambres</a> </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="{{ path('nos_decouverte') }}" class="text-dark">A découvrir</a> </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">Contactez-nous</a> </p>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="font-weight-bold">NOS MENTIONS</h4>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">Mentions légales</a> </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">CGV</a> </p>
+                    <p> 
+                        <img src="https://img.icons8.com/material-two-tone/24/000000/arrow.png"/>
+                        <a href="" class="text-dark">RGPD</a> </p>
+                </div>
+                <div class="col-md-3 aides-contact">
+                    <h4 class="font-weight-bold">AIDES & CONTACT</h4>
+                    <p> Une question ? <br> Un renseignement ? </p>
+                    <p> <a href="" class="text-dark font-weight-bold">Contactez-nous</a> </p>
+                    <a href="" class="mx-2">
+                        <img src="https://img.icons8.com/metro/26/000000/facebook-new--v2.png"/>
+                    </a>
+                    <a href="" class="mx-2">
+                        <img src="https://img.icons8.com/ios-glyphs/50/000000/instagram-new.png"/ width="30px">
+                    </a>
+                </div>
+            </div>
+
+        </footer>
 
     </body>
 </html>
