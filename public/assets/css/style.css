@@ -18,6 +18,20 @@
     background: #be9f8c;
     transition: 0.5s;
 }
+.bg-leger{
+    transition: 0.5s;
+}
+.bg-leger:hover{
+    background: #be9f8c;
+    transition: 0.5s;
+    font-weight: bold;
+}
+.bg-leger:hover a {
+    color: #fff !important;
+}
+.bg-leger a:hover{
+    color: #000 !important;
+}
 .bg-blue-light{
     background: #afc8cb;
 }
@@ -110,3 +124,58 @@ footer .aides-contact{
 }
 
 /* END CSS*/
+
+/*PAGE RESERVATION */
+
+.carousel-inner img{
+    height: 100vh !important;
+}
+.reservation-slider .click img{
+    width: 35px;
+}
+.reservation-slider .click {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 50%;
+    box-shadow: -2px 2px 2px #000;
+}
+
+.reservation-slider .details {
+    position: absolute;
+    bottom: 0;
+    margin-left: 6rem;
+    text-shadow: 1px 1px 1px #000;
+    border-bottom: 1px solid #a5816c;
+    width: 85%;
+}
+.details p{
+    color: #a5816c;
+}
+
+.reservation-card {
+    border: 1px solid #a29a9a;
+    border-radius: 50px;
+}
+
+.list-reserve {
+    border: 1px solid #a29a9a;
+    border-radius: 20px;
+    margin: 0.2rem !important;
+}
+.list-reserve .col-md-6 {
+    border-bottom: 1px solid #a29a9a;
+}
+.list-reserve .col-md-6.one {
+    border-right: 1px solid #a29a9a;
+}
+
+.list-reserve p {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.reservation-comment{
+    border: 1px solid #a29a9a;
+    border-radius: 20px;
+}
+/*END PAGE */
