@@ -176,6 +176,17 @@ footer .aides-contact{
 
 .reservation-comment{
     border: 1px solid #a29a9a;
-    border-radius: 20px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.reservation-comment p{
+    margin-bottom: 0;
+}
+
+.reserve-user img{
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
 }
 /*END PAGE */
