@@ -190,3 +190,25 @@ footer .aides-contact{
     height: 54px;
 }
 /*END PAGE */
+
+
+/* WIZARD FORM RESERVATION */
+
+.step-design label, .step-design legend{
+    display: none;
+}
+.step-design input{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.resume-date{
+    background: #d9c9bf;
+    border-radius: 50px;
+}
+
+.step-three label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #757272;
+}
+/*END WIZARD RESERVATION */
