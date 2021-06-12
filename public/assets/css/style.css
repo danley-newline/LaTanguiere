@@ -194,6 +194,10 @@ footer .aides-contact{
 
 /* WIZARD FORM RESERVATION */
 
+.sw-theme-default{
+    border: none;
+}
+
 .step-design label, .step-design legend{
     display: none;
 }
@@ -201,13 +205,17 @@ footer .aides-contact{
     font-weight: bold;
     margin-bottom: 2rem;
 }
-.resume-date{
+.bg-marron-step{
     background: #d9c9bf;
     border-radius: 50px;
 }
 
 .step-three label {
     font-size: 12px;
+    font-weight: bold;
+    color: #757272;
+}
+.step-four p{
     font-weight: bold;
     color: #757272;
 }

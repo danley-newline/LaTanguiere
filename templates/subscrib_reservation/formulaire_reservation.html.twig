@@ -106,7 +106,7 @@
                             <div class="text-center">
                                 <h4 class="font-weight-bold mb-4">Réservation</h4>
                             </div>
-                            <div class="resume-date p-5">
+                            <div class="bg-marron-step p-5">
                                 <p>CHAMBRE ENDORMI</p>
                                 <p class="text-muted">Du <span>22 avril 2021</span> au <span>12 mai  2021</span></p>
                                 <p class="text-muted">Pour <span>2 voyageurs</span></p>
@@ -151,8 +151,14 @@
                                 <div class="col-md-10">
                                     {{ form_row(reservationForm.carte_numero, {'label':'NUMÉRO DE CARTE','attr': { 'required':'required'}}) }}
                                 </div>
-                                <div class="col-md-2">
-                                    <img src="{{ asset('assets/img/clement-helardot-95YRwf6CNw8-unsplash.jpg') }}" height="10" width="30" alt="">
+                                <div class="col-md-2 px-0">
+
+                                <div class="form-group">
+                                    <div class="mt-4 pt-2">
+                                    <img src="{{ asset('assets/img/clement-helardot-95YRwf6CNw8-unsplash.jpg') }}" width="50px" alt="">
+                                    </div>
+                                </div>
+                                
                                 </div>
                             </div>
 
@@ -173,8 +179,48 @@
                 </div>
 
 
-                <div id="step-4" class="" style="display:none;">
-                    Step 4 Content
+                <div id="step-4" class="w-75  mx-auto" style="display:none;">
+                    <div class="text-center mb-4">
+                        <h3 class="font-weight-bold">Confirmation de paiement</h3>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-7">
+                            <div class="bg-marron-step step-four p-5">
+                                <div class="text-center">
+                                    <h4 class="font-weight-bold">Récapitulatif de la réservation</h4>
+                                </div>
+
+                                <h5 class="font-weight-bold pt-5 pb-4">CHAMBRE ENDORMI</h5>
+                                <p>Du <span>22 avril 2021</span> au <span>12 mai 2021</span></p>
+                                <p>Prix: <span>90 £ x </span> <span> 21 nuits</span></p>
+                                <h5 class="font-weight-bold pt-5 pb-4">Numéro de carte utilisée : <span> MASTERCARD 0000</span></h5>
+                                <h5 class="font-weight-bold">Solde total <span class="text-muted">: 1890 £</span></h5>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-5 mt-5 py-5">
+                            <div class="step-four border">
+                                <div class="text-center">
+                                    <h6 class="font-weight-bold pt-5 pb-4">Votre numéro de réservation est le <span>43CD53</span></h6>
+                                </div>
+                                <div class="px-5">
+                                    <p>John Doe</p>
+                                    <p>John.doe@gmail.com</p>
+                                    <p>00 00 00 00 00</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center font-weight-bold text-muted my-5">
+                        <p>Pour toute demande d’information ou d’annulation, merci de nous contacter directement</p>
+                        <a class="btn bg-marron w-25" href="{{ path('nous_contacter') }}">
+                            <h5 class="text-light my-2"> NOUS CONTACTER </h5>
+                        </a>
+                    
+                    </div>
+                    
                 </div>
 
                 {{ form_end(reservationForm) }}
@@ -191,9 +237,23 @@
     <script type="text/javascript">
     $(document).ready(function() {
 
-        $('#smartwizard').smartWizard();
+        $('#smartwizard').smartWizard({
+            selected: 0,
+            theme:'arrows',
+            toolbarSettings: {
+                toolbarPosition: 'bottom', // none, top, bottom, both
+                toolbarButtonPosition: 'center', // left, right, center
+                showNextButton: true, // show/hide a Next button
+                showPreviousButton: true, // show/hide a Previous button
+                toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+            },
+            
+            lang: { next: 'Suivant', previous: 'Retour' },
+            
+        });
 
     });
+    
     </script>
 
 {% endblock %}
