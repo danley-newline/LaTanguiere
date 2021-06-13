@@ -219,4 +219,23 @@ footer .aides-contact{
     font-weight: bold;
     color: #757272;
 }
+
+
+.sw-theme-arrows, .sw-theme-default, .sw-theme-arrows>.nav{
+    border: none !important;
+}
+.sw-theme-arrows .toolbar button {
+    background: #d4baaa !important;
+    border: 1px solid #d4baaa !important;
+    width: 14% !important;
+    font-weight: bold !important;
+}
+.sw-theme-arrows .toolbar button:hover{
+    background: #daa787 !important;
+    transition: 0.5s;
+}
+
+.toolbar button.disabled{
+    display: none !important;
+}
 /*END WIZARD RESERVATION */

@@ -5,9 +5,8 @@ namespace App\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\TelType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 
 class SubscribReservationType extends AbstractType
 {
@@ -21,11 +20,11 @@ class SubscribReservationType extends AbstractType
             ->add('adresse')
             ->add('ville')
             ->add('code_postal')
-            ->add('date_debut' ,DateType::class, [
-                'widget' => 'choice',
+            ->add('date_debut' ,BirthdayType::class, [
+                'widget' => 'single_text'
             ])
-            ->add('date_fin', DateType::class, [
-                'widget' => 'choice',
+            ->add('date_fin',BirthdayType::class, [
+                'widget' => 'single_text'
             ])
             ->add('carte_nom_prenom')
             ->add('carte_adresse')

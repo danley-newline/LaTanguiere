@@ -2,6 +2,11 @@
 
 {% block title %}Espace Reservations{% endblock %}
 
+{% block stylesheets %} 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.2/main.min.css" 
+    integrity="sha256-u40zn9KeZYpMjgYaxWJccb4HnP0i8XI17xkXrEklevE=" crossorigin="anonymous">
+{% endblock %}
+
 
 {% block body %}
      <section>  
@@ -85,8 +90,15 @@
                 <div class="w-100 px-3">
                     <h4 class="font-weight-bold mb-4">Dates</h4>
                 </div>
-                <div class="col-md-8">
-               
+                <div class="col-md-8" >
+                    <div class="row p-5">
+                        <div id="calendrier_1"  class="col-md-6">
+
+                        </div>
+                        <div id="calendrier_2"  class="col-md-6">
+                        
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="col-md-4">
@@ -305,7 +317,7 @@
             
         </div>
 
-        <div class="row text-center mx-2 my-5">
+            <div class="row text-center mx-2 my-5">
                 <div class="col-md-4 line-top">
                 </div>
                 <div class="col-md-4">
@@ -351,3 +363,63 @@
 
 {% endblock %}
 
+{% block javascripts %}
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.2/main.min.js" 
+    integrity="sha256-yirUYbNvdsLHfZcQDyDMB51pfQ0Mn8siGDZOvtBgCFw=" crossorigin="anonymous"></script>
+
+
+    <script>
+    
+    /*PREMIER CALENDRIER */
+        window.onload = () => {
+            let calendarOne = document.querySelector('#calendrier_1')
+            let calendar = new FullCalendar.Calendar(calendarOne,{
+                initialView: 'dayGridMonth',
+                locale: 'fr',
+                timeZone: 'UTC',
+                headerToolbar: {
+                    start: '',
+                    center:'title',
+                    end: ''
+                },
+                editable: true,
+                eventResizableFromStart: true
+            });
+
+            calendar.on('eventChange', (e) => {
+                console.log(e)
+            })
+            
+
+            calendar.render();
+        };
+
+        
+        /*SECOND CALENDRIER */
+
+       document.addEventListener('DOMContentLoaded', function() {
+            var calendarTwo = document.getElementById('calendrier_2');
+            let calendar = new FullCalendar.Calendar(calendarTwo,{
+                initialView: 'dayGridMonth',
+                locale: 'fr',
+                timeZone: 'UTC',
+                headerToolbar: {
+                    start: 'prev',
+                    center:'title',
+                    end: 'next'
+                },
+                editable: true,
+                eventResizableFromStart: true,
+                
+            });
+
+            calendar.on('eventChange', (e) => {
+                console.log(e)
+            })
+            
+
+            calendar.render();
+        });
+    
+    </script>
+{% endblock %}
