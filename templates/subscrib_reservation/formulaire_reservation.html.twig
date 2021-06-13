@@ -4,8 +4,6 @@
 {% block stylesheets %} 
 
 <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
 
 {% endblock %}
 
@@ -14,40 +12,43 @@
 
 {% block body %}
     <section class"bloc-souscription">
+
+        {{ form_start(reservationForm) }}
+
         <div class="my-5" id="smartwizard">
 
             <ul class="nav mb-5 w-50 mx-auto">
                 <li class="nav-item">
                 <a class="nav-link" href="#step-1">
-                    formulaire
+                    
                 </a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#step-2">
-                    date
+                    
                 </a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#step-3">
-                    payement
+                    
                 </a>
                 </li>
                 <li class="nav-item">
                 <a class="nav-link" href="#step-4">
-                    resumé
+                    
                 </a>
                 </li>
             </ul>
 
             <div class="tab-content px-4">
 
-                {{ form_start(reservationForm) }}
+                
 
                 <div id="step-1" class="step-design step-one-reservation  mx-auto w-50" >
 
                     <div class="row">
                         <div class="col-md-6">
-                            {{ form_row(reservationForm.nom, {'attr': {'placeholder': 'Nom ', 'required':'required'}}) }}
+                                {{ form_row(reservationForm.nom, {'attr': {'placeholder': 'Nom ', 'required':'required'}}) }}
                         </div>
                         <div class="col-md-6">
                             {{ form_row(reservationForm.prenom, {'attr': {'placeholder': 'Prénom ', 'required':'required'}}) }}
@@ -229,22 +230,29 @@
                     
                 </div>
 
-                {{ form_end(reservationForm) }}
+                
 
             </div>
         </div>
+
+        
+        {{ form_end(reservationForm) }}
     </section>
 {% endblock %}
 
 
 
 {% block javascripts %}
-           
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+
+
+
     <script type="text/javascript">
     $(document).ready(function() {
 
         $('#smartwizard').smartWizard({
-            theme:'arrows',
+            theme:'dots',
             enableURLhash: false,
             
             toolbarSettings: {
@@ -258,6 +266,12 @@
             lang: { next: 'continuer'},
             
         });
+
+
+        //$("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber,stepDirection) {
+            
+            //return false;
+        //});
 
        
 

@@ -224,13 +224,19 @@ footer .aides-contact{
 .sw-theme-arrows, .sw-theme-default, .sw-theme-arrows>.nav{
     border: none !important;
 }
-.sw-theme-arrows .toolbar button {
+.sw-theme-dots>.nav::before{
+    height: 2px !important;
+    background-color: #d4baaa !important;
+}
+
+ 
+.toolbar button {
     background: #d4baaa !important;
     border: 1px solid #d4baaa !important;
     width: 14% !important;
     font-weight: bold !important;
 }
-.sw-theme-arrows .toolbar button:hover{
+.toolbar button:hover{
     background: #daa787 !important;
     transition: 0.5s;
 }
