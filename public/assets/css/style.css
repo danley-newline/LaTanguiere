@@ -189,6 +189,48 @@ footer .aides-contact{
     width: 54px;
     height: 54px;
 }
+
+.calendar_block table, .calendar_block th, .calendar_block td {
+    border: none !important;
+}
+.calendar_block tbody {
+    font-size: 14px;
+    font-weight: bold;
+}
+.fc .fc-button {
+    padding: 0 0.5rem !important;
+    font-size: 13px !important;
+}
+
+.calendar_block th{
+    font-size: 13px;
+    font-weight: initial;
+}
+.calendar_block tr {
+    text-align: center;
+}
+
+.fc-daygrid-day-frame.fc-scrollgrid-sync-inner {
+    height: 38px !important;
+    padding: 5px;
+}
+
+.calendar_block h2{
+    font-size: 20px !important;
+    font-weight: bold !important;
+}
+.fc .fc-daygrid-day-top {
+    display: inline !important;
+}
+
+
+td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-today {
+    background: #000 !important;
+    color: #fff !important;
+    border-radius: 50%;
+    text-align: center !important;
+}
+
 /*END PAGE */
 
 

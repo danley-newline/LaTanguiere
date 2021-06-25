@@ -92,10 +92,10 @@
                 </div>
                 <div class="col-md-8" >
                     <div class="row p-5">
-                        <div id="calendrier_1"  class="col-md-6">
+                        <div id="calendrier_1"  class="col-md-6 calendar_block">
 
                         </div>
-                        <div id="calendrier_2"  class="col-md-6">
+                        <div id="calendrier_2"  class="col-md-6 calendar_block">
                         
                         </div>
                     </div>
@@ -382,6 +382,10 @@
                     center:'title',
                     end: ''
                 },
+                contentHeight:"auto",
+                firstDay: 1,
+                displayEventTime: false,
+                showNonCurrentDates: false,
                 editable: true,
                 eventResizableFromStart: true
             });
@@ -408,6 +412,9 @@
                     center:'title',
                     end: 'next'
                 },
+                contentHeight:"auto",
+                firstDay: 1,
+                showNonCurrentDates: false,
                 editable: true,
                 eventResizableFromStart: true,
                 
