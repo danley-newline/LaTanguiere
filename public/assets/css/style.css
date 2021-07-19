@@ -1,3 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* body, h1, h2, h3, h4, h5, h6{
+    font-family: 'Quicksand', sans-serif !important;
+} */
+
+.css-img {
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.css-img::after {
+    content:'';
+    background-color : rgba(0, 0, 0, 0.2) ;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+}
+
+.css-img img {
+    position: absolute;
+    /* height: 100%; le height est en auto par defaut*/
+    /* width: 100%; */
+    max-width:none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.css-img .css-img-text {
+    color :  white ;
+    position: absolute;
+    font-size: 2.5em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.css-navbar {
+    /* position : absolute !important; */
+    /* background-color : white ; */
+    /* z-index:999; */
+}
+
+.main .css-img img{
+
+    /* font-size: 2.5em; */
+    left: 0;
+    /* top: 0; */
+    /* transform: none; */
+    /* height: 100%; */
+    transform: translate(0,-50%)
+    
+}
+
+.main .css-img {
+    height: 200px;
+    transform: translateY(-10px);
+}
+
+.main .css-img::after {
+    content : none;
+}
+
+.css-img-logo {
+       
+}
+
+.css-img-nosChambres {
+
+}
+
+#img-decouverte {
+}
+
+
+
+/*****************************************************************************************************************************/
+
 .line-top {
     margin-top: 1.5rem;
     border-top: 1px solid #000;
@@ -59,7 +143,6 @@ footer .aides-contact{
 
 .img-chambres{
     width: 96%;
-    margin-top: -1.5rem;
 }
 .text-light{
     text-shadow: 2px 1px 2px #000;
@@ -287,3 +370,9 @@ td.fc-daygrid-day.fc-day.fc-day-fri.fc-day-today {
     display: none !important;
 }
 /*END WIZARD RESERVATION */
+
+
+
+body, h1, h2, h3, h4, h5, h6{
+    font-family: 'Quicksand', sans-serif !important;
+}
