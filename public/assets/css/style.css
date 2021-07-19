@@ -48,12 +48,7 @@
 }
 
 .main .css-img img{
-
-    /* font-size: 2.5em; */
     left: 0;
-    /* top: 0; */
-    /* transform: none; */
-    /* height: 100%; */
     transform: translate(0,-50%)
     
 }
@@ -78,6 +73,9 @@
 #img-decouverte {
 }
 
+.css-contact {
+    height: 500px;
+}
 
 
 /*****************************************************************************************************************************/
@@ -88,26 +86,26 @@
 }
 .bg-vert-sombre{
     background: #578f94;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bg-vert-sombre:hover{
     background: #69c2ca;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bg-marron{
     background: #d9c9bf;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bg-marron:hover{
     background: #be9f8c;
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bg-leger{
-    transition: 0.5s;
+    transition: 0.3s;
 }
 .bg-leger:hover{
     background: #be9f8c;
-    transition: 0.5s;
+    transition: 0.3s;
     font-weight: bold;
 }
 .bg-leger:hover a {
